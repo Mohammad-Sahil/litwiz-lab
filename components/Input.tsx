@@ -6,8 +6,8 @@ const inputRef = useRef()
 const userData = useStore(state =>  state.userData)
 
 const addPerson = () => {
-    userData(inputRef.current.value)
-    inputRef.current.value = ' '
+    // userData(inputRef.current.value)
+    // inputRef.current.value = ' '
 }
 
   return (
