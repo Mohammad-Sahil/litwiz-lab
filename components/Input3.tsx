@@ -52,10 +52,10 @@ const App: React.FC = () => {
   return (
    <>
          <Form
-         initialValues={{ name:user?.name, age: user?.age, gender: user?.gender  }}
+         initialValues={{ name:user?.name, age: user?.age, gender: user?.gender}}
          {...layout} form={form} style={{marginTop: "30px"}} name="control-hooks" onFinish={onFinish}>
-    <h3 style={{marginLeft: "15px"}}>Name:  <span style={{color:"rgba(0,0,0,0.5)",marginLeft: "10px"}}>{user.name}</span></h3>
-      <Form.Item name="name" label="Edit Name"s>
+    <h3 style={{marginLeft: "15px"}}>Name:  <span style={{color:"rgba(0,0,0,0.5)",marginLeft: "10px"}}>{user?.name}</span></h3>
+      <Form.Item name="name" label="Edit Name">
         <Input onChange={(e) => setName(e.target.value)} />
       </Form.Item>
       <h3 style={{marginLeft: "15px"}}>Age:  <span style={{color:"rgba(0,0,0,0.5)",marginLeft: "10px"}}>{user?.age}</span></h3>
