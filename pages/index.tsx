@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import useStore from '../zustand/store'
-import UserData from '../components/UserData'
 import Input2 from '../components/Input2'
 // import { DatePicker, Space } from 'antd'
 
