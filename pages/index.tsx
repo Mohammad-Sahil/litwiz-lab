@@ -21,7 +21,7 @@ const { Header, Content, Footer, Sider } = Layout;
 
 function getItem(label, key, icon, children) {
   return {
-    key,
+    key, 
     icon,
     children,
     label,
@@ -75,9 +75,6 @@ const Home = () => {
           >
              <h1>Please enter your details: </h1>
               <Input2/>
-              <hr/>
-              <UserData/>
-              <hr/>
           </div>
         </Content>
         <Footer
