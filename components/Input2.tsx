@@ -60,7 +60,7 @@ const App: React.FC = () => {
       </Form.Item>
       <Form.Item {...tailLayout} style={{marginRight: "20px !important"}}>
         <Button onClick={addPerson} type="primary" htmlType="submit" style={{marginRight: "20px !important"}}>
-          Submit
+          Continue
         </Button>
         <Button htmlType="button" onClick={onReset}>
           Reset
