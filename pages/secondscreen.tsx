@@ -22,8 +22,8 @@ import Link from '../node_modules/next/link';
   }
   
   const items = [
-    getItem('First Screen', '/', <PieChartOutlined />),
-    getItem('Second Screen', '/secondscreen', <DesktopOutlined />),
+    getItem('First Screen', '/', <PieChartOutlined />,''),
+    getItem('Second Screen', '/secondscreen', <DesktopOutlined />,''),
   ];
   
   const Secondscreen = () => {

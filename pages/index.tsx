@@ -29,8 +29,8 @@ function getItem(label, key, icon, children) {
 }
 
 const items = [
-  getItem('First Screen', '/', <PieChartOutlined />),
-  getItem('Second Screen', '/secondscreen', <DesktopOutlined />),
+  getItem('First Screen', '/', <PieChartOutlined />, ''),
+  getItem('Second Screen', '/secondscreen', <DesktopOutlined />, ''),
 ];
 
 const Home = () => {
