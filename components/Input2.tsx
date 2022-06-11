@@ -43,7 +43,7 @@ const App: React.FC = () => {
       <Form.Item name="name" label="Name" rules={[{ required: true }]}>
         <Input onChange={(e) => setName(e.target.value)} />
       </Form.Item>
-      <Form.Item name="age" label="Age" rules={[{ required: true }]}>
+      <Form.Item name="age" label="Age" rules={[{ required: true, message: 'Age must be greater than or equal to 10',pattern: new RegExp(/^([1-9]\d|\d{3,})$/)}]}>
           <InputNumber value={age} onChange={(e) => setAge(e)}/>
         </Form.Item>
       <Form.Item name="gender" label="Gender" rules={[{ required: true }]}>
