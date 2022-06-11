@@ -10,3 +10,18 @@
 #components-form-demo-control-hooks .ant-btn {
   margin-right: 8px;
 }
+.darkModeBackground{
+  background-color: #001529d1 !important;
+  color:rgba(255, 255, 255, 0.785) !important;
+}
+.darkModeBackground h1{
+  color:rgba(255, 255, 255, 0.785) !important;
+}
+.darkModeBackground label{
+  color:rgba(255, 255, 255, 0.785) !important;
+}
+.darkModeIcon{
+  position: absolute;
+  top: 0;
+  right: 0;
+}

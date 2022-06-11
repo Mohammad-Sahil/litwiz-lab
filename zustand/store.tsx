@@ -1,9 +1,11 @@
 import create from 'zustand'
 // import { devtools, persist } from 'zustand/middleware'
 
-const store = (set: (arg0: (state: any) => { user: any[] }) => any) => ({
+const store = (set) => ({
   user: {},
-  userData: (data: any) => set(state => ({ user: data })),
+  userData: (data: any) => set(() => ({ user: data })),
+  dark: false,
+  toggleDarkMode: () => set((state) => ({ dark: !state.dark}))
 })
 // store = persist(store, {name:  'user_settings'})
 
