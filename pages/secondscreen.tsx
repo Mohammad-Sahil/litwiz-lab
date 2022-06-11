@@ -9,6 +9,7 @@ import {
   import React, { useState } from 'react';
   import "antd/dist/antd.css"
 import Link from '../node_modules/next/link';
+import Input3 from '../components/Input3';
 
   const { Header, Content, Footer, Sider } = Layout;
   
@@ -60,7 +61,8 @@ import Link from '../node_modules/next/link';
                 minHeight: 360,
               }}
             >
-              Bill is a cat.
+              <h1>You have entered details:  </h1>
+              <Input3/>
             </div>
           </Content>
           <Footer

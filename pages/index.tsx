@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import useStore from '../zustand/store'
 import UserData from '../components/UserData'
-import Input from '../components/Input'
+import Input2 from '../components/Input2'
 // import { DatePicker, Space } from 'antd'
 
 import {
@@ -73,8 +73,8 @@ const Home = () => {
               minHeight: 360,
             }}
           >
-             <h1>People</h1>
-              <Input/>
+             <h1>Please enter your details: </h1>
+              <Input2/>
               <hr/>
               <UserData/>
               <hr/>
