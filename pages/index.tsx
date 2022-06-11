@@ -40,10 +40,10 @@ const Home = () => {
   useEffect(() => {
     if(dark){
       const boxes = document.querySelectorAll('.site-layout-background, .ant-layout,.ant-layout-footer,.ant-input, .ant-input-number-input,.ant-select-selector,.ant-btn')
-      for (const box of boxes) {box.classList.add('darkModeBackground');}
+      .forEach(x=>x.classList.add('darkModeBackground'));
     }else{
       const boxes = document.querySelectorAll('.site-layout-background, .ant-layout,.ant-layout-footer,.ant-input, .ant-input-number-input,.ant-select-selector,.ant-btn')
-      for (const box of boxes) {box.classList.remove('darkModeBackground');}
+      .forEach(x=>x.classList.remove('darkModeBackground'));
     }
   },[dark])
   const darkMode = () => {
