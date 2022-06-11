@@ -33,16 +33,16 @@ import Input3 from '../components/Input3';
   const Secondscreen = () => {
   const user = useStore(state =>  state.user)
   const [ toggleDarkModee, setToggleDarkMode] = useState(null)
-  const toggleDarkMode = useStore(state =>  state.toggleDarkMode)
+  const toggleDarkMode = useStore((state: { toggleDarkMode: any; }) =>  state.toggleDarkMode)
   const dark = useStore(state =>  state.dark)
     const [collapsed, setCollapsed] = useState(false);
     useEffect(() => {
       if(dark){
         const boxes = document.querySelectorAll('.site-layout-background, .ant-layout,.ant-layout-footer,.ant-input, .ant-input-number-input,.ant-select-selector,.ant-btn')
-        for (const box of boxes) {box.classList.add('darkModeBackground');}
+        .forEach(x=>x.classList.add('darkModeBackground'));
       }else{
         const boxes = document.querySelectorAll('.site-layout-background, .ant-layout,.ant-layout-footer,.ant-input, .ant-input-number-input,.ant-select-selector,.ant-btn')
-        for (const box of boxes) {box.classList.remove('darkModeBackground');}
+        .forEach(x=>x.classList.remove('darkModeBackground'));
       }
     },[dark])
     const darkMode = () => {
