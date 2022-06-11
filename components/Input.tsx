@@ -1,18 +1,19 @@
 import useStore from '../zustand/store'
-import { useRef } from 'react'
+import { useState } from 'react'
 
 const Input = () => {
-const inputRef = useRef()
+// const inputRef = useRef()
+const [ input,  setInput ] = useState(null)
 const userData = useStore(state =>  state.userData)
 
 const addPerson = () => {
-    // userData(inputRef.current.value)
-    // inputRef.current.value = ' '
-}
+    userData(input)
+    setInput('')
+  }
 
   return (
     <form onSubmit={e =>  e.preventDefault()}>
-        <input type='text' ref={inputRef} />
+        <input type='text' value={input} onChange={(e) => setInput(e.target.value)} />
         <button onClick={addPerson}>Addd person</button>
     </form>
   )
