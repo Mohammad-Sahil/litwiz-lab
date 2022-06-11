@@ -33,7 +33,7 @@ const items = [
 
 const Home = () => {
   const user = useStore(state =>  state.user)
-  const [ toggleDarkModee, setToggleDarkMode] = useState(null)
+  const [ toggleDarkModee, setToggleDarkMode] = useState(false)
   const toggleDarkMode = useStore(state =>  state.toggleDarkMode)
   const dark = useStore(state =>  state.dark)
   const [collapsed, setCollapsed] = useState(false);
