@@ -5,7 +5,8 @@ const store = (set) => ({
   user: {},
   userData: (data: any) => set(() => ({ user: data })),
   dark: false,
-  toggleDarkMode: () => set((state) => ({ dark: !state.dark}))
+  toggleDarkMode: (value) => set(() => ({ dark: value}))
+  // toggleDarkMode: () => set((state) => ({ dark: (state.dark ?  true : !state.dark)}))
 })
 // store = persist(store, {name:  'user_settings'})
 

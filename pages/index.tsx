@@ -33,7 +33,7 @@ const items = [
 
 const Home = () => {
   const user = useStore(state =>  state.user)
-  const [ toggleDarkModee, setToggleDarkMode] = useState(false)
+  // const [ toggleDarkModee, setToggleDarkMode] = useState(false)
   const toggleDarkMode = useStore((state: { toggleDarkMode: any; }) =>  state.toggleDarkMode)
   const dark = useStore(state =>  state.dark)
   const [collapsed, setCollapsed] = useState(false);
@@ -41,14 +41,16 @@ const Home = () => {
     if(dark){
       const boxes = document.querySelectorAll('.site-layout-background, .ant-layout,.ant-layout-footer,.ant-input, .ant-input-number-input,.ant-select-selector,.ant-btn')
       .forEach(x=>x.classList.add('darkModeBackground'));
+      console.log("this is dark >>>", dark)
     }else{
       const boxes = document.querySelectorAll('.site-layout-background, .ant-layout,.ant-layout-footer,.ant-input, .ant-input-number-input,.ant-select-selector,.ant-btn')
       .forEach(x=>x.classList.remove('darkModeBackground'));
+      console.log("this is light >>>", dark)
     }
   },[dark])
-  const darkMode = () => {
-    toggleDarkMode(toggleDarkModee)
-  }
+  // const darkMode = () => {
+  //   toggleDarkMode(toggleDarkModee)
+  // }
   console.log('now mode is >>>>  ', dark)
   return (
     <Layout
@@ -75,7 +77,11 @@ const Home = () => {
             color:  'rgba(0, 0, 0, 0.70)'
           }}
         >LitWiz Labs - React Js Assessment
-        <Checkbox onClick={darkMode} className='darkModeIcon' onChange={(e) => setToggleDarkMode(e.target.checked)}>Dark Mode</Checkbox>
+        <Checkbox
+        // onClick={darkMode}
+        className='darkModeIcon' defaultValue={dark} onChange={(e) => (
+          toggleDarkMode(e.target.checked)
+        )}>Dark Mode</Checkbox>
         </Header>
         <Content
           style={{
